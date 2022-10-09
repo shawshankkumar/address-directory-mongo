@@ -1,5 +1,7 @@
 const express= require('express');
+const dotenv = require('dotenv');
 const app=express();
+dotenv.config()
 const MongoClient = require("mongodb").MongoClient;
 app.use(express.json());//Middleware
 app.use(express.urlencoded({extended:true}));//Middleware
@@ -60,7 +62,7 @@ app.delete('/', async(req,res)=>{
 //calls the test function and activates a port
 
 testfunc().then(() => {
-    app.listen(6789, ()=> {
+    app.listen(process.env?.PORT, ()=> {
         console.log("Who dareth awaken the server?");
     })
 })
