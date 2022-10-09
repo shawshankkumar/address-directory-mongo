@@ -10,8 +10,10 @@
   "author": "Shashank",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.0.3",
     "express": "^4.17.1",
     "mongo": "^0.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
   }
 }
