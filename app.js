@@ -6,7 +6,7 @@ app.use(express.urlencoded({extended:true}));//Middleware
 
 //add mongodb link to make sure this works
 
-const client = new MongoClient("", {
+const client = new MongoClient(process.env.MONGO_URI, {
   useUnifiedTopology: true,
 });
 
